@@ -17,5 +17,11 @@ pipeline {
       }
     }
 
+    stage('Deploy Image') {
+      steps {
+        sh 'docker push rogermz/proy-cdk:1.0'
+      }
+    }
+
   }
 }
