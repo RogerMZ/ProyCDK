@@ -1,4 +1,9 @@
 pipeline {
+  environment {
+    registryCredential = 'dockerhub_id'
+    dockerImage = ''
+    registry = 'rogermz/proy-cdk'
+  }
   agent any
   stages {
     stage('Env&Tools') {
@@ -32,10 +37,5 @@ pipeline {
       }
     }
 
-  }
-  environment {
-    registryCredential = 'dockerhub_id'
-    dockerImage = ''
-    registry = 'rogermz/proy-cdk'
   }
 }
