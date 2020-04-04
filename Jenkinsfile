@@ -18,7 +18,6 @@ pipeline {
 
     stage('Deploy Image') {
       steps {
-        sh 'docker login -u rogermz --password-stdin rmz619doc'
         sh 'docker push rogermz/proy-cdk:1.0'
       }
     }
