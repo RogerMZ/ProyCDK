@@ -2,6 +2,7 @@
 
 from flask import Flask, request
 import controller
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -34,4 +35,7 @@ def getsess():
         passw = data['password']
         return controller.getSession(email,passw)
     return
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", debug=True)
 
