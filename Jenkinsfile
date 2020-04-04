@@ -18,6 +18,7 @@ pipeline {
 
     stage('Deploy Image') {
       steps {
+        sh 'docker.withRegistry(\'\',registryCredential)'
         sh 'docker push rogermz/proy-cdk:1.0'
       }
     }
