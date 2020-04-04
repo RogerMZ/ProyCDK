@@ -12,8 +12,8 @@ pipeline {
     stage('Build Dkr') {
       steps {
         sh '''echo \'docker build -t rogermz/proy-cdk:1.0 .\'
-sh \'docker build -t rogermz/proy-cdk:1.0 .\'
-sh \'docker images\''''
+docker build -t rogermz/proy-cdk:1.0 .
+docker images'''
       }
     }
 
