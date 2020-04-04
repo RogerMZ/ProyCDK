@@ -17,8 +17,14 @@ pipeline {
     }
 
     stage('Deploy Image') {
+      agent any
       steps {
-        sh 'docker push rogermz/proy-cdk:1.0'
+        script {
+          docker.withRegistry( '', registryCredential ) {
+            dockerImage.push()
+          }
+        }
+
       }
     }
 
