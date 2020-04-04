@@ -24,7 +24,7 @@ pipeline {
       agent any
       steps {
         script {
-          docker.withRegistry( '', registryCredential ) {
+          docker.withRegistry( '', 'dockerhub_id' ) {
             dockerImage.push()
           }
         }
