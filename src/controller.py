@@ -9,7 +9,7 @@ params = (
   "DATABASE=tgpython;"
   "UID=tgurus_alumno;"
   "PWD=tg2019;"
-  "SERVER=172.x.x.x;"
+  "SERVER=138.68.2.24;"
   "PORT=5432;"
 )
 
