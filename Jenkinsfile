@@ -13,7 +13,6 @@ pipeline {
       steps {
         sh 'docker build -t rogermz/proy-cdk:1.0 .'
         sh 'docker images'
-        dockerNode(image: 'rogermz/proy-cdk')
       }
     }
 
