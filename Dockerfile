@@ -6,8 +6,6 @@ ADD ./src /code
 
 RUN cat /code/odbcinst.ini > /etc/odbcinst.ini
 
-RUN ls -ltr
-
 WORKDIR /code
 
 RUN pip install -r dependences.txt 
